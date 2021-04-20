@@ -59,6 +59,19 @@
 #main_flex_box #sing_up_form #sign_up_inputs div label input:focus {
   outline: none;
 }
+#main_flex_box #sing_up_form #sign_up_inputs div label input:focus:invalid {
+  box-shadow: none;
+  background: url("../resources/icons/warning-sign.png") no-repeat 95% 50%;
+  background-size: 18px;
+}
+#main_flex_box #sing_up_form #sign_up_inputs div label input:focus:valid {
+  box-shadow: none;
+  background: url("../resources/icons/accept.png") no-repeat 95% 50%;
+  background-size: 18px;
+}
+#main_flex_box #sing_up_form #sign_up_inputs div label input:invalid {
+  box-shadow: none;
+}
 #main_flex_box #sing_up_form #sign_up_inputs div label img {
   width: 20px;
   margin-right: 15px;
