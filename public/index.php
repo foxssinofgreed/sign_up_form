@@ -14,19 +14,19 @@
                 <div>
                     <label>
                         <img src="resources/icons/user.png" alt="user">
-                        <input type="text" placeholder="Username" name="user">
+                        <input type="text" placeholder="Username" name="user" required>
                     </label>
                 </div>
                 <div>
                     <label>
                         <img src="resources/icons/email.png" alt="email">
-                        <input type="email" placeholder="Email" name="email">
+                        <input type="email" placeholder="Email" name="email" required>
                     </label>
                 </div>
                 <div>
                     <label>
                         <img src="resources/icons/padlock.png" alt="lock">
-                        <input type="password" placeholder="Password" name="password">
+                        <input type="password" placeholder="Password" name="password" required>
                     </label>
                 </div>
             </div>

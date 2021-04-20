@@ -65,10 +65,22 @@ $red: rgba(205, 54, 54, 0.7);
 
             &::placeholder{
               color: $medium;
-
             }
             &:focus{
               outline: none;
+              &:invalid{
+                box-shadow: none;
+                background: url("../resources/icons/warning-sign.png") no-repeat 95% 50%;
+                background-size: 18px;
+              }
+              &:valid{
+                box-shadow: none;
+                background: url("../resources/icons/accept.png") no-repeat 95% 50%;
+                background-size: 18px;
+              }
+            }
+            &:invalid{
+              box-shadow: none;
             }
           }
           img{
