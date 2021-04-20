@@ -1,4 +1,4 @@
-Hello, this sign up for was made by Luka Aptsiauri (Me)
+Hello, this sign up form was made by Luka Aptsiauri (Me)
 
 If you want to see breafly what this repository contains you can go to the link below,
 
