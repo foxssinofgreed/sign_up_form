@@ -7,15 +7,13 @@ $red: rgba(205, 54, 54, 0.7);
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 800px;
+  height: 900px;
 
   #sing_up_form{
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     width: 600px;
-    padding-right: 100px;
     padding-top: 70px;
     position: relative;
 
