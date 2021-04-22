@@ -137,12 +137,12 @@
 }
 .error_404 .sun {
   position: absolute;
-  background: url("../resources/404/sun.png");
-  background-size: 220px;
-  width: 220px;
-  height: 220px;
-  right: 280px;
-  top: 170px;
+  background: url("../resources/404/moon.png");
+  background-size: 240px;
+  width: 240px;
+  height: 240px;
+  right: 275px;
+  top: 165px;
 }
 
 /*# sourceMappingURL=style.css.map */
