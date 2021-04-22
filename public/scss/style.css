@@ -90,16 +90,7 @@
   opacity: 0.8;
   transition: 0.3s;
 }
-#main_flex_box #right_picture {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#main_flex_box #right_picture img {
-  width: 728px;
-}
-
-#error_message {
+#main_flex_box #sing_up_form #error_message {
   position: absolute;
   display: flex;
   font-family: "Ubuntu", serif;
@@ -115,6 +106,43 @@
   opacity: 0;
   transition: 1s;
   visibility: hidden;
+}
+#main_flex_box #right_picture {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main_flex_box #right_picture img {
+  width: 728px;
+  z-index: 1;
+}
+
+.error_404 {
+  background-color: #333333;
+  color: #849a99;
+}
+.error_404 h1 {
+  font-size: 200px;
+  margin: 0;
+}
+.error_404 h2 {
+  font-size: 30px;
+  margin: 0;
+  line-height: 40px;
+}
+.error_404 .text_404 {
+  border-bottom: 1px solid #777664;
+  padding-bottom: 10px;
+}
+.error_404 .sun {
+  position: absolute;
+  background: url("../resources/404/sun.png");
+  background-size: 220px;
+  width: 220px;
+  height: 220px;
+  right: 280px;
+  top: 170px;
 }
 
 /*# sourceMappingURL=style.css.map */
