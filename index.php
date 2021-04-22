@@ -16,7 +16,7 @@
 
     <!-- window -->
     <title>Sign Up</title>
-    <link rel="icon" type="image/png" href="public/resources/images/fire_still.png">
+    <link rel="icon" type="image/png" href="public/resources/images/fire2.gif">
 </head>
 <body>
     <div id="main_flex_box">
