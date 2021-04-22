@@ -2,11 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="scss/style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- local css -->
+    <link href="scss/style.css" rel="stylesheet">
+
+    <!-- local js -->
     <script src="js/ajax.js"></script>
-    <!--<script src="js/"></script>-->
+
+    <!-- error script -->
+    <style id="response_style"></style>
+
+    <!-- window -->
     <title>Sign Up</title>
+    <link rel="icon" type="image/png" href="resources/images/fire2.gif">
 </head>
 <body>
     <div id="main_flex_box">
@@ -15,7 +24,7 @@
                 <div>
                     <label>
                         <img src="resources/icons/user.png" alt="user">
-                        <input type="text" placeholder="Username" autocomplete="off" name="user" required>
+                        <input type="text" placeholder="Username" autocomplete="off" name="user" minlength="3" title="username length should be more than 3 characters" required>
                     </label>
                 </div>
                 <div>
@@ -27,7 +36,7 @@
                 <div>
                     <label>
                         <img src="resources/icons/padlock.png" alt="lock">
-                        <input type="password" autocomplete="off" placeholder="Password" name="password" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Minimum of 8 characters, should have at least one uppercase letter and two numbers." required>
+                        <input type="password" placeholder="Password" autocomplete="off" name="password" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Minimum of 8 characters, should have at least one uppercase letter and two numbers" required>
                     </label>
                 </div>
             </div>
