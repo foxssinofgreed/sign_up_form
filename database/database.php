@@ -3,12 +3,12 @@
 class database {
     public PDO $pdo;
     public function __construct(){
-        $config = require_once __DIR__.'config.php';
+        $config = require __DIR__.'/config.php';
 
-        $servername = $config['host'];
+        $servername = $config['servername'];
         $username = $config['username'];
         $password = $config['password'];
-        $database = $config['database'];
+        $database = $config['dbname'];
 
         $this -> pdo = new \PDO("mysql:host=$servername;dbname=$database", $username, $password);
     }
@@ -19,7 +19,7 @@ class database {
         $statement->bindParam(':password',$password);
         return $statement->execute();
     }
-    public function get_email($email){
+    public function get_email($email): bool{
         $statement = $this -> pdo -> prepare('SELECT * FROM users WHERE email = :email');
         $statement -> bindValue(':email', $email);
         $statement -> execute();
@@ -30,7 +30,7 @@ class database {
         }
         else return false;
     }
-    public function get_user($username){
+    public function get_user($username): bool{
         $statement = $this -> pdo -> prepare('SELECT * FROM users WHERE username = :username');
         $statement -> bindValue(':username', $username);
         $statement -> execute();
