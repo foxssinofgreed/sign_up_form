@@ -1,11 +1,8 @@
 <?php
 
-$servername = 'localhost';
-$username = 'newuser';
-$password = 'password';
-$dbname = 'sign_up_form';
+$config = require __DIR__.'/config.php';
 
-$connection = new mysqli($servername, $username, $password, $dbname);
+$connection = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
 
 if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);

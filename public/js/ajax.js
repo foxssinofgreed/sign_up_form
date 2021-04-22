@@ -7,14 +7,14 @@ $(document).ready(function (){
             'password': $('#password').val().trim()}
         $.ajax({
             type: 'POST',
-            url: 'controller/registration.php',
+            url: 'http://localhost:8080/registration',
             data: data,
             success: function (result){
                 $('#response_style').html(result);
                 setTimeout(function (){$('#response_style').empty();}, 5000);
 
                 if(result.includes('some magic key')){
-                    $('#error_message').css({'visibility': 'visible', 'background': 'url("public/resources/images/success.png")', 'opacity': '0.6'});
+                    $('#error_message').css({'visibility': 'visible', 'background': 'url("resources/images/success.png")', 'opacity': '0.6'});
                     $('#error_message span')[0].innerHTML = 'You successfully registered';
                     setTimeout(function (){$('#error_message').attr('style', '');}, 5000);
                     setTimeout(function (){$('#response_style').empty();}, 5000);

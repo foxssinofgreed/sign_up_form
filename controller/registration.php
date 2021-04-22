@@ -22,15 +22,15 @@ use database;
     $username_taken = $input -> get_user($data['username']);
 
     if(!$data['username'] || $username_taken || strlen($data['username']) < 3) {
-        $errors['username'] = '#user{background: url("public/resources/icons/warning-sign_red.png") no-repeat 95% 50%; background-size: 18px;}';
+        $errors['username'] = '#user{background: url("resources/icons/warning-sign_red.png") no-repeat 95% 50%; background-size: 18px;}';
     }
 
     if(!$data['email'] || $email_taken || !preg_match('/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i', $data['email'])) {
-        $errors['email'] = '#email{background: url("public/resources/icons/warning-sign_red.png") no-repeat 95% 50%; background-size: 18px;}';
+        $errors['email'] = '#email{background: url("resources/icons/warning-sign_red.png") no-repeat 95% 50%; background-size: 18px;}';
     }
 
     if(!$data['password'] || strlen($data['password']) < 8 || !preg_match('/[A-Z]/', $data['password']) || !preg_match('~[0-9]~', $data['password'])) {
-        $errors['password'] = '#password{background: url("public/resources/icons/warning-sign_red.png") no-repeat 95% 50%; background-size: 18px;}';
+        $errors['password'] = '#password{background: url("resources/icons/warning-sign_red.png") no-repeat 95% 50%; background-size: 18px;}';
     }
 
     if($email_taken){
@@ -41,9 +41,9 @@ use database;
         $errors['ex_username'] = '/* its taken my boy */';
     }
 
-    $success['username'] = '#user{background: url("public/resources/icons/accept_green.png") no-repeat 95% 50%; background-size: 18px;}';
-    $success['email'] = '#email{background: url("public/resources/icons/accept_green.png") no-repeat 95% 50%; background-size: 18px;}';
-    $success['password'] = '#password{background: url("public/resources/icons/accept_green.png") no-repeat 95% 50%; background-size: 18px;}';
+    $success['username'] = '#user{background: url("resources/icons/accept_green.png") no-repeat 95% 50%; background-size: 18px;}';
+    $success['email'] = '#email{background: url("resources/icons/accept_green.png") no-repeat 95% 50%; background-size: 18px;}';
+    $success['password'] = '#password{background: url("resources/icons/accept_green.png") no-repeat 95% 50%; background-size: 18px;}';
 
     /*$params = [
         'errors' => $errors,
@@ -55,6 +55,13 @@ use database;
             echo $values;
         }
         echo '/* some magic key */';
+
+
+        $to = $data['email'];
+        $subject = 'Sign Up';
+        $content = 'Congratulations you\'re registered to nowhere at all';
+
+        mail($to, $subject, $content);
     }
     else{
         foreach ($errors as $key => $values){
