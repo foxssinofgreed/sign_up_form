@@ -11,6 +11,7 @@
   width: 600px;
   padding-top: 70px;
   position: relative;
+  font-family: "Ubuntu", serif;
 }
 #main_flex_box #sing_up_form #sign_up_inputs div {
   display: flex;
@@ -50,6 +51,7 @@
   width: 100%;
   height: 40px;
   font-size: 16px;
+  font-family: "Ubuntu", serif;
 }
 #main_flex_box #sing_up_form #sign_up_inputs div label input::placeholder {
   color: #3e3144;
@@ -95,6 +97,24 @@
 }
 #main_flex_box #right_picture img {
   width: 728px;
+}
+
+#error_message {
+  position: absolute;
+  display: flex;
+  font-family: "Ubuntu", serif;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  bottom: 70px;
+  left: -70px;
+  width: 400px;
+  height: 70px;
+  background: url("../resources/images/error.png");
+  opacity: 0;
+  transition: 1s;
+  visibility: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -17,7 +17,7 @@ class database {
         $statement->bindParam(':username',$username);
         $statement->bindParam(':email',$email);
         $statement->bindParam(':password',$password);
-        return $statement->execute();
+        return $statement -> execute();
     }
     public function get_email($email): bool{
         $statement = $this -> pdo -> prepare('SELECT * FROM users WHERE email = :email');

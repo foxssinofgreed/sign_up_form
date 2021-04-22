@@ -50,6 +50,7 @@ use database;
         'data' => $data
     ];*/
     if(empty($errors)){
+        $input -> register($data['username'], $data['email'], $data['password']);
         foreach ($success as $key => $values){
             echo $values;
         }

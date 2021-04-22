@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
 
-    <!-- local css -->
+
+        <!-- local css -->
     <link href="public/scss/style.css" rel="stylesheet">
 
     <!-- local js -->
@@ -37,11 +39,15 @@
                 <div>
                     <label>
                         <img src="public/resources/icons/padlock.png" alt="lock">
-                        <input id="password" type="password" placeholder="Password" name="password" autocomplete="off" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Minimum of 8 characters, should have at least one uppercase letter and two numbers." required>
+                        <input id="password" type="password" placeholder="Password" name="password" autocomplete="off" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Minimum of 8 characters, should have at least one uppercase letter and 2 numbers" required>
                     </label>
                 </div>
             </div>
             <div id="button"></div>
+
+            <div id="error_message">
+                <span>error</span>
+            </div>
         </div>
         <div id="right_picture">
             <img src="public/resources/images/fire2.gif" alt="boy_at_fire_camp">
