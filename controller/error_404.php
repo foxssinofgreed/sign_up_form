@@ -9,7 +9,7 @@
 
     <!-- window -->
     <title>404</title>
-    <link rel="icon" type="image/png" href="resources/404/minimalist_forest_transparent.gif">
+    <link rel="icon" type="image/png" href="resources/images/fire2.gif">
 </head>
 <body class="error_404">
 <div id="main_flex_box">
