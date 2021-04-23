@@ -7,6 +7,7 @@ $config = require_once __DIR__.'/../database/config.php';
 use database;
 
 
+
     function skell(){
         foreach ($_POST as $key => $value){
             $data[$key] = filter_input(INPUT_POST, $key, FILTER_SANITIZE_SPECIAL_CHARS);
@@ -45,10 +46,6 @@ use database;
     $success['email'] = '#email{background: url("resources/icons/accept_green.png") no-repeat 95% 50%; background-size: 18px;}';
     $success['password'] = '#password{background: url("resources/icons/accept_green.png") no-repeat 95% 50%; background-size: 18px;}';
 
-    /*$params = [
-        'errors' => $errors,
-        'data' => $data
-    ];*/
     if(empty($errors)){
         $input -> register($data['username'], $data['email'], $data['password']);
         foreach ($success as $key => $values){
@@ -56,12 +53,12 @@ use database;
         }
         echo '/* some magic key */';
 
-
         $to = $data['email'];
         $subject = 'Sign Up';
-        $content = 'Congratulations you\'re registered to nowhere at all';
+        $message = 'Congratulations you\'ve signed up to CampFire <br><br>Here are your information<br><br>Username: ' . $data['username'] . '<br>Email: ' . $data['email'] . '<br>Passwprd: ' . $data['password'];
+        $headers = "From: fox@gmail.com\r\n";
 
-        mail($to, $subject, $content);
+        mail($to, $subject, $message, $headers);
     }
     else{
         foreach ($errors as $key => $values){
