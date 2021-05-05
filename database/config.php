@@ -2,7 +2,7 @@
 
 return [
     'servername' => 'localhost',
-    'username' => 'newuser',
+    'username' => 'foxy',
     'password' => 'password',
     'dbname' => 'sign_up_form'
 ];
