@@ -7,7 +7,7 @@ $(document).ready(function (){
             'password': $('#password').val().trim()}
         $.ajax({
             type: 'POST',
-            url: 'http://localhost:8000/registration',
+            url: '/registration',
             data: data,
             success: function (result){
                 $('#response_style').html(result);
