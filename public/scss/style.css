@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 900px;
+  height: 90vh;
 }
 #main_flex_box #sing_up_form {
   display: flex;
@@ -114,7 +114,7 @@
   justify-content: center;
 }
 #main_flex_box #right_picture img {
-  width: 728px;
+  width: 35vw;
   z-index: 1;
 }
 
@@ -138,11 +138,18 @@
 .error_404 .sun {
   position: absolute;
   background: url("../resources/404/moon.png");
+  background-size: 11.589vw;
+  width: 11.589vw;
+  height: 11.589vw;
+  right: 13.279vw;
+  top: 10vh;
+  /*
   background-size: 240px;
   width: 240px;
   height: 240px;
   right: 275px;
   top: 165px;
+  */
 }
 
 /*# sourceMappingURL=style.css.map */

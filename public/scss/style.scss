@@ -7,7 +7,7 @@ $red: rgba(205, 54, 54, 0.7);
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 900px;
+  height: 90vh; // 900px
 
   #sing_up_form{
     display: flex;
@@ -131,7 +131,7 @@ $red: rgba(205, 54, 54, 0.7);
     align-items: center;
     justify-content: center;
     img{
-      width: 728px;
+      width: 35vw; // 728px
       z-index: 1;
     }
   }
@@ -158,10 +158,17 @@ $red: rgba(205, 54, 54, 0.7);
   .sun{
     position: absolute;
     background: url("../resources/404/moon.png");
+    background-size: 11.589vw;
+    width: 11.589vw;
+    height: 11.589vw;
+    right: 13.279vw;
+    top: 10vh;
+    /*
     background-size: 240px;
     width: 240px;
     height: 240px;
     right: 275px;
     top: 165px;
+    */
   }
 }
